@@ -7,6 +7,10 @@
 
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
   <script src="https://kit.fontawesome.com/8bee116590.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg==" crossorigin="anonymous"></script>
+  
+  <script src='./script.js'></script>
   <link rel='stylesheet' href='style.css'>
     <title>Kolek's Weather Dashboard</title>
 </head>
@@ -14,27 +18,165 @@
     <nav class="navbar fixed-top">
         <div class="header-text">
               <h1 id="navbar-title">Weather Dashboard</h1>
-              <h5 id="navbar-subtitle"><var>Get the current date</var></h5>  
+              <h2>Moment Date</h2>
+                <!-- container for Moment.js output -->
+                    <div id="displayMoment"></div>  
+
+                    <!-- use Moment.js to display current date in a div (#displayMoment)
+                    var NowMoment = moment();
+                    var eDisplayMoment = document.getElementById('displayMoment');
+                    eDisplayMoment.innerHTML = NowMoment.format('YYYY-M-D'); -->
                
         </div>
     </nav>
     
-    <div class="container-fluid">
-        <div class="grid-container">
-            <div class="item1">date+1</div>
-            <div class="item2">date+2</div>
-            <div class="item3">date+3</div>  
-            <div class="item4">date+4</div>
-            <div class="item5">date+5</div>
-            <div class="item6">date+6</div>
-            <div class="item7">date+7</div>
+
+    <div class='container'>
+        <div class='row'>
+          <div class='col-md-3'>
+            <div class='card search-section'>
+              <div class='card-body'>
+                <label>Search For a City:</label>
+                <div class="input-group mb-3">
+                  <input id="city-search" type="text" class="form-control" placeholder="Manchester, CT">
+                    <div class="input-group-append">
+                      <button id='getWeather' class="btn btn-success" type="submit">
+                        <i id='getWeatherIcon' class="fas fa-search" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                </div>
+                <!-- <h5>Search For a City</h5> -->
+                <!-- <input name='city-search'></input> -->
+                <!-- icon here -->
+                <!-- <i>icon</i> -->
+                <!-- past cities here -->
+            <div id='past-cities'>
+                <li></li>
+            </div>
+         </div>
         </div>
     </div>
 
+    <div class='col-md-9 '>
+        <div class='row'>
+          <div class='currentcard'>
+            <div class='card-body'>
+              <h5 class='card-title' id='cityName'>CurrentDate</h5>
+          
+        </div>
+        <ul>
+            <li><img id='curWeathIcn'></img></li>
+            <li class='card-text' id='curTemp'>Temp:</li>
+            <li class='card-text' id='curHum'>Humidity:</li>
+            <li class='card-text' id='curWind'>Windspeed:</li>
+            <li class='card-text' id='curUv'>UV Index:</li>
+          </ul>
+        
+    </div>
+    
+    
+<br>
+<div class='row'>
+        <!-- Date plus 1 day -->
+    <div class="forecastcard" style="width: 10rem;">
+        <div class='card-body'>
+            <h5 class='card-title' id='currDatePlus1d'>Date+1</h5>
+                <!-- <p class="card-title"> date </p> -->
+        </div>
+        <ul>
+            <li><img id='curWeathIcn'></img></li>
+            <li class='card-text' id='curTemp'>Temp:</li>
+            <li class='card-text' id='curHum'>Humidity:</li>
+            <li class='card-text' id='curWind'>Windspeed:</li>
+            <li class='card-text' id='curUv'>UV Index:</li>
+        </ul>
+    </div>
+        <!-- Date plus 2 days -->
+    <div class="forecastcard" style="width: 10rem;">
+        <div class='card-body'>
+            <h5 class='card-title' id='currDatePlus2d'>Date+2</h5>
+                <p class="card-title"> date </p>
+        </div>
+        <ul>
+            <li><img id='curWeathIcn'></img></li>
+            <li class='card-text' id='curTemp'>Temp:</li>
+            <li class='card-text' id='curHum'>Humidity:</li>
+            <li class='card-text' id='curWind'>Windspeed:</li>
+            <li class='card-text' id='curUv'>UV Index:</li>
+        </ul>
+    </div>
+        <!-- Date plus 3 days -->
+    <div class="forecastcard" style="width: 10rem;">
+        <div class='card-body'>
+            <h5 class='card-title' id='currDatePlus3d'>Date+3</h5>
+                <p class="card-title"> date </p>
+        </div>
+        <ul>
+            <li><img id='curWeathIcn'></img></li>
+            <li class='card-text' id='curTemp'>Temp:</li>
+            <li class='card-text' id='curHum'>Humidity:</li>
+            <li class='card-text' id='curWind'>Windspeed:</li>
+            <li class='card-text' id='curUv'>UV Index:</li>
+        </ul>
+    </div>
+        <!-- Date plus 4 days -->
+    <div class="forecastcard" style="width: 10rem;">
+        <div class='card-body'>
+            <h5 class='card-title' id='currDatePlus4d'>Date+4</h5>
+                <p class="card-title"> date </p>
+        </div>
+        <ul>
+            <li><img id='curWeathIcn'></img></li>
+            <li class='card-text' id='curTemp'>Temp:</li>
+            <li class='card-text' id='curHum'>Humidity:</li>
+            <li class='card-text' id='curWind'>Windspeed:</li>
+            <li class='card-text' id='curUv'>UV Index:</li>
+        </ul>
+    </div>
+        <!-- Date plus 5 days -->
+    <div class="forecastcard" style="width: 10rem;">
+        <div class='card-body'>
+            <h5 class='card-title' id='currDatePlus5d'>Date+5</h5>
+                <p class="card-title"> date </p>
+        </div>
+        <ul>
+            <li><img id='curWeathIcn'></img></li>
+            <li class='card-text' id='curTemp'>Temp:</li>
+            <li class='card-text' id='curHum'>Humidity:</li>
+            <li class='card-text' id='curWind'>Windspeed:</li>
+            <li class='card-text' id='curUv'>UV Index:</li>
+        </ul>
+    </div>
+        <!-- Date plus 6 days -->
+    <div class="forecastcard" style="width: 10rem;">
+        <div class='card-body'>
+            <h5 class='card-title' id='currDatePlus6d'>Date+6</h5>
+                <p class="card-title"> date </p>
+        </div>
+        <ul>
+            <li><img id='curWeathIcn'></img></li>
+            <li class='card-text' id='curTemp'>Temp:</li>
+            <li class='card-text' id='curHum'>Humidity:</li>
+            <li class='card-text' id='curWind'>Windspeed:</li>
+            <li class='card-text' id='curUv'>UV Index:</li>
+        </ul>
+    </div>
+        <!-- Date plus 7 days -->
+    <div class="forecastcard" style="width: 10rem;">
+        <div class='card-body'>
+            <h5 class='card-title' id='currDatePlus7d'>Date+7</h5>
+                <p class="card-title"> date </p>
+        </div>
+        <ul>
+            <li><img id='curWeathIcn'></img></li>
+            <li class='card-text' id='curTemp'>Temp:</li>
+            <li class='card-text' id='curHum'>Humidity:</li>
+            <li class='card-text' id='curWind'>Windspeed:</li>
+            <li class='card-text' id='curUv'>UV Index:</li>
+        </ul>
+    </div>
 
-
-
-    <!-- Start Footer -->
+</div>        <!-- Start Footer -->
     <nav class="navbar fixed-bottom footer">
         <div class="footer-text">Assignment 6 Weather Dashboard</div>
     </nav>
