@@ -10,8 +10,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg==" crossorigin="anonymous"></script>
   
-  <script src='./script.js'></script>
-  <link rel='stylesheet' href='style.css'>
+  <script src='./assets/script.js'></script>
+  <link rel='stylesheet' href='./assets/style.css'>
     <title>Kolek's Weather Dashboard</title>
 </head>
 <body>
@@ -19,16 +19,13 @@
         <div class="header-text">
               <h1 id="navbar-title">Weather Dashboard</h1>
               <h2 id="displayJsDate"></h2>
-                <!-- container for Moment.js output -->
-                  
-
         </div>
     </nav>
     
 
     <div class='container'>
         <div class='row'>
-            <div class='col-md-3'>
+            <div class='col-md-4'>
                 <div class='card search-section'>
 
                     <div class='card-body'>
@@ -38,15 +35,15 @@
                                     type="text"
                                     class="form-control"
                                     placeholder="Manchester, CT">
-                         </div>
-                    </div>
+                    
 
-                    <div class="input-group-append">
-                      <button id='getWeather' class="btn btn-success" type="submit">
-                        <i id='getWeatherIcon' class="fas fa-search" aria-hidden="true"></i>
-                      </button>
+                            <div class="input-group-append">
+                                <button id='getWeather' class="btn btn-success" type="submit">
+                                <i id='getWeatherIcon' class="fas fa-search" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                
                     <div id='past-cities'>
                         <ul id='past-city-ul'></ul>
                     </div>
@@ -56,36 +53,32 @@
 
             <div class='row'>
                 <div class='row'>
-                    <div class='currentcard'>
-                        <div class='card-body'>
-                            <h5 class='card-title' id='todaysDate'>CurrentDate</h5>
+                    <div class='col-md-8'>
+                        <div class='currentcard'>
+                            <div class='card-body'>
+                                <h5 class='card-title' id='todaysDate'>CurrentDate</h5>
+                            </div>
+                                           
+                            <ul>
+                                <li><img id='curWeathIcn'></img></li>
+                                <li class='card-text' id='curTemp'>Temp:</li>
+                                <li class='card-text' id='curHum'>Humidity:</li>
+                                <li class='card-text' id='curWind'>Windspeed:</li>
+                                <li class='card-text' id='curUv'>UV Index:</li>
+                            </ul>
                         </div>
-                    
-                    
-                        <ul>
-                            <li><img id='curWeathIcn'></img></li>
-                            <li class='card-text' id='curTemp'>Temp:</li>
-                            <li class='card-text' id='curHum'>Humidity:</li>
-                            <li class='card-text' id='curWind'>Windspeed:</li>
-                            <li class='card-text' id='curUv'>UV Index:</li>
-                        </ul>
                     </div>
                 </div>
             </div>
             
         </div>
    
-    <!-- <h5>Search For a City</h5> -->
-    <!-- <input name='city-search'></input> -->
-    <!-- icon here -->
-    <!-- <i>icon</i> -->
-    <!-- past cities here -->
-    
-        <br>
+     
+        
         <div class='row'>
             <h2 class='card-title'>7-Day Forcast</h2>
         </div>
-        <br>
+        
         
         <!-- Date plus 1 day -->
         <div class="forecastcard" style="width: 10rem;">

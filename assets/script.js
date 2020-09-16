@@ -19,7 +19,7 @@ var sYear = NowDate.getFullYear();
 // eDisplayDate.innerHTML = sYear+'-'+sMonth+'-'+sDay;
 
 
-document.getElementById('todaysDate').innerHTML = moment().format();
+document.getElementById('todaysDate').innerHTML = moment().format('');
 // add 1 days to current date
 document.getElementById('currDatePlus1d').innerHTML = moment().add('days', 1);
 // add 2 days to current date
@@ -34,34 +34,6 @@ document.getElementById('currDatePlus5d').innerHTML = moment().add('days', 5);
 document.getElementById('currDatePlus6d').innerHTML = moment().add('days', 6);
 // add 7 days to current date
 document.getElementById('currDatePlus7d').innerHTML = moment().add('days', 7);
-
-$.ajax({
-    url: queryURL,
-    method: 'GET'
-  }).then(function (response) {
-    console.log("uvi",response);
-    let bkcolor = "violet";
-    
-    // if (test) response.value = 7.1234567;
-    let uv = parseFloat(response.value);
-    console.log("uv",uv)
-    console.log("type of uv",typeof uv);
-    if (uv < 3) { 
-      bkcolor = 'green';
-    } else if (uv < 6) { 
-      bkcolor = 'yellow';
-    } else if (uv < 8) { 
-      bkcolor = 'orange';
-    } else if (uv < 11) { 
-      bkcolor = 'red';
-    }
-    let title = '<span>UV Index: </span>';
-    let color = title + `<span style="background-color: ${bkcolor}; padding: 0 7px 0 7px;">${response.value}</span>`;
-    $('#curUv').html(color);
-  }); 
-
-  
-
 
 
 });
