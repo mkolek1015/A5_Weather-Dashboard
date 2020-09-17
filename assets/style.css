@@ -14,12 +14,11 @@ body {
     vertical-align: middle;
   }
 
-.card-search-section
 
 .container {
     width: 1500px;
-    max-width: 80%;
-    max-height: max-content;
+    width: 100%;
+    height: 7in;
     background-color: #2196f3;
     border-radius: 5px;
     padding: 20px;
@@ -29,23 +28,28 @@ body {
 .forecastcard {
   float: left;
   background-color: whitesmoke;
+  width: 3in;
+  height: 3in;
   border-radius: 5px;
   border-color: black;
   border-width: 3px;
   padding: 20px;
-  margin: (15 , 15 , 15 , 15);
+  margin: 10px;
   position: relative;
 
 }
 
 .currentcard {
-  float: left;
+  float: auto;
   background-color: whitesmoke;
+  width: 4in;
+  height: 2.5in;
   border-radius: 5px;
   border-color: black;
   border-width: 3px;
-  padding: (20 , 20 , 20, 20);
-  margin: (15 , 15 , 15 , 15);
+  padding: 20px;
+  margin: 10px;
+  position: relative;
 
 }
 
@@ -62,6 +66,7 @@ body {
     border-bottom: solid;
     border-bottom-color: #ccc;
     width: 100%;
+    height: 10%;
     text-align: center;
   }
 
@@ -70,7 +75,7 @@ body {
     font-size: 30px;
     color: #0e3b00;
     text-align: center;
-  } */
+  } 
 
 #navbar-subtitle {
     padding: 2px;
