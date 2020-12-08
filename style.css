@@ -8,7 +8,7 @@ ul{
 }
 
 li{ 
-  font-size: 8pt;
+  font-size: 7pt;
 }
 
 .col { 
@@ -23,7 +23,7 @@ li{
 
 .forecast-card {
   background-color: #535353;
-  width: 140px;
+  width: 100px;
   padding: 10px;
 }
 
