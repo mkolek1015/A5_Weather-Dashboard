@@ -1,5 +1,6 @@
 div {
   border: solid;
+  border-width: thin;
 }
 
 ul{ 
@@ -8,7 +9,7 @@ ul{
 }
 
 li{ 
-  font-size: 7pt;
+  font-size: 8pt;
 }
 
 .col { 
@@ -22,7 +23,7 @@ li{
 
 
 .forecast-card {
-  background-color: #535353;
+  background-color: #bdbdbd;
   width: 100px;
   padding: 10px;
 }
