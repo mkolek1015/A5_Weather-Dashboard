@@ -1,116 +1,50 @@
-body {
-    /* image for background */
-    background-image: url('./WeatherBackground.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-    
-      /* font parameters */
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: .8em;
-  
-    /* added padding to prevent navbar overlap.*/
-    padding-top: 100px;
-    vertical-align: middle;
-  }
+div {
+  /* border: solid; */
+}
 
+ul{ 
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li{ 
+  font-size: 8pt;
+}
+
+.col { 
+  padding: 5px;
+}
+
+.card {
+  width: 100%;
+  background-color: #ececec;
+}
+
+
+.forecast-card {
+  background-color: #8FCBFF;
+  /* width: 140px; */
+  /* padding: 10px; */
+}
+
+.search-section {
+  height: 100%;
+}
+
+
+.cityList {
+  border: solid;
+  border-width: thin;
+  margin: 5px;
+  padding-left: 2px;
+  background-color: lightgrey;
+}
+
+.cityList:hover {
+  background-color: #28a745;
+  color: #fff;
+}
 
 .container {
-    width: 1500px;
-    width: 100%;
-    height: 7in;
-    background-color: #2196f3;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 0 10px 2px;
-  }
-
-.forecastcard {
-  float: left;
-  background-color: whitesmoke;
-  width: 3in;
-  height: 3in;
-  border-radius: 5px;
-  border-color: black;
-  border-width: 3px;
-  padding: 20px;
-  margin: 10px;
-  position: relative;
-
-}
-
-.currentcard {
-  float: auto;
-  background-color: whitesmoke;
-  width: 4in;
-  height: 2.5in;
-  border-radius: 5px;
-  border-color: black;
-  border-width: 3px;
-  padding: 20px;
-  margin: 10px;
-  position: relative;
-
-}
-
-
-
-.navbar {
-    background-color: #229100;  
-    color: #0b2902;  
-  
-    /* pulls everything down to push up against bottom border */
-    padding-bottom: 0;
-    
-    /* creates solid line for the bottom border  */
-    border-bottom: solid;
-    border-bottom-color: #ccc;
-    width: 100%;
-    height: 10%;
-    text-align: center;
-  }
-
- #navbar-title {
-    padding: 0px;
-    font-size: 30px;
-    color: #0e3b00;
-    text-align: center;
-  } 
-
-#navbar-subtitle {
-    padding: 2px;
-    font-size: 15px;
-    color: #0e3b00;
-    text-align: center;
-  }
-
-.footer {
-    /* set text properties */
-    background-color: #666;
-  
-      /* sets height of footer*/
-      height: 10%;
-    
-      /* sets properties for footer border*/
-      border-top: solid;
-      border-top-color: #b6d7e2;  
-      border-top-width: 8px;
-    }
-  
-.footer-text, .header-text {
-      /* forces text across the entire screen so it has a center */
-      width: 100%;
-      text-align: center;
-    
-      font-size: 10px;
-      color:#b6d7e2; 
-    }
-
-/* media query for screen size to be applied to center text to switch at same time as navbar */
-@media (max-width: 768px) {
-    .container-fluid {
-      /* removes paddding on either side */
-      padding-left: 0;
-      padding-right: 0;
-    }
+  margin-top: 5px;
 }
