@@ -1,5 +1,5 @@
 div {
-  /* border: solid; */
+  border: solid;
 }
 
 ul{ 
@@ -22,7 +22,7 @@ li{
 
 
 .forecast-card {
-  background-color: #8FCBFF;
+  background-color: #535353;
   width: 140px;
   padding: 10px;
 }
